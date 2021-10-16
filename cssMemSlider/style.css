@@ -37,17 +37,19 @@ input[type="radio"] {
 }
 
 .slide {
+  display: flex;
+  justify-content: center;
   flex: none;
   width: 100%;
   height: 45vw;
-  border-radius: 3.5rem;
   overflow: hidden;
   transition: 0.5s ease-in-out;
 }
 
 .slide img {
   display: block;
-  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
 }
 
 .meme__btns {
@@ -128,4 +130,8 @@ input[type="radio"] {
 
 #switch2:checked ~ .memes-slider .slide {
   transform: translateX(-100%);
+}
+
+#switch3:checked ~ .memes-slider .slide {
+  transform: translateX(-200%);
 }
