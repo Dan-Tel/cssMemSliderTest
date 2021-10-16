@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6FB5F5;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.meme-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.memes-slider {
+  flex-basis: 100%;
+  height: 50%;
+}
+
+.overflow {
+  width: 60vw;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.slide {
+  flex: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 3.5rem;
+  overflow: hidden;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+}
+
+.meme__btns {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav {
+  height: 2rem;
+  width: 2rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: -0.1rem 0.1rem 0 #ACACAC,
+              -0.2rem 0.2rem 0 #ACACAC;
+  transition: 0.3s ease-in-out;
+}
+
+.nav:hover {
+  box-shadow: none;
+  box-shadow: 0 0 0 #ACACAC;
+  transform: translate(-0.2rem, 0.2rem)
+}
+
+#switch1:checked ~ .meme__btns label:nth-child(1),
+#switch2:checked ~ .meme__btns label:nth-child(2),
+#switch3:checked ~ .meme__btns label:nth-child(3),
+#switch4:checked ~ .meme__btns label:nth-child(4) {
+  background-color: #E53636;
+  box-shadow: -0.1rem 0.1rem 0 #7C2F2F,
+              -0.2rem 0.2rem 0 #7C2F2F;
+}
+
+#switch1:checked ~ .meme__btns label:nth-child(1):hover,
+#switch2:checked ~ .meme__btns label:nth-child(2):hover,
+#switch3:checked ~ .meme__btns label:nth-child(3):hover,
+#switch4:checked ~ .meme__btns label:nth-child(4):hover {
+  box-shadow: 0 0 #7C2F2F;
+}
+
+.meme__text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+}
+
+.text {
+  float: left;
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+#switch1:checked ~ .meme__text label:nth-child(1),
+#switch2:checked ~ .meme__text label:nth-child(2),
+#switch3:checked ~ .meme__text label:nth-child(3),
+#switch4:checked ~ .meme__text label:nth-child(4) {
+  animation: textAnim 0.5s ease-in forwards; 
+}
+
+@keyframes textAnim {
+  from {
+    width: 0;
+    opacity: 0;
+  } to {
+    opacity: 1;
+    width: auto;
+  }
+}
