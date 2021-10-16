@@ -25,11 +25,11 @@ input[type="radio"] {
 
 .memes-slider {
   flex-basis: 100%;
-  height: 50%;
 }
 
 .overflow {
   width: 60vw;
+  height: 100%;
   display: flex;
   flex-flow: row nowrap;
   flex-direction: row;
@@ -39,9 +39,10 @@ input[type="radio"] {
 .slide {
   flex: none;
   width: 100%;
-  height: 100%;
+  height: 45vw;
   border-radius: 3.5rem;
   overflow: hidden;
+  transition: 0.5s ease-in-out;
 }
 
 .slide img {
@@ -51,23 +52,24 @@ input[type="radio"] {
 
 .meme__btns {
   display: flex;
-  gap: 3rem;
+  justify-content: space-between;
+  width: 30%;
 }
 
 .nav {
-  height: 2rem;
-  width: 2rem;
+  height: 2vw;
+  width: 2vw;
   background-color: #ffffff;
   border-radius: 50%;
-  box-shadow: -0.1rem 0.1rem 0 #ACACAC,
-              -0.2rem 0.2rem 0 #ACACAC;
+  box-shadow: -0.1vw 0.1vw 0 #ACACAC,
+              -0.2vw 0.2vw 0 #ACACAC;
   transition: 0.3s ease-in-out;
 }
 
 .nav:hover {
   box-shadow: none;
   box-shadow: 0 0 0 #ACACAC;
-  transform: translate(-0.2rem, 0.2rem)
+  transform: translate(-0.2vw, 0.2vw)
 }
 
 #switch1:checked ~ .meme__btns label:nth-child(1),
@@ -75,8 +77,8 @@ input[type="radio"] {
 #switch3:checked ~ .meme__btns label:nth-child(3),
 #switch4:checked ~ .meme__btns label:nth-child(4) {
   background-color: #E53636;
-  box-shadow: -0.1rem 0.1rem 0 #7C2F2F,
-              -0.2rem 0.2rem 0 #7C2F2F;
+  box-shadow: -0.1vw 0.1vw 0 #7C2F2F,
+              -0.2vw 0.2vw 0 #7C2F2F;
 }
 
 #switch1:checked ~ .meme__btns label:nth-child(1):hover,
@@ -88,7 +90,9 @@ input[type="radio"] {
 
 .meme__text {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
+  font-size: 1.5vw;
+  line-height: 2vw;
+  width: 60%;
 }
 
 .text {
@@ -112,6 +116,14 @@ input[type="radio"] {
     opacity: 0;
   } to {
     opacity: 1;
-    width: auto;
+    width: 100%;
   }
 }
+
+#switch1:checked ~ .memes-slider .slide {
+  transform: translateX(0%);
+}
+/* 
+#switch2:checked ~ .memes-slider .slide {
+  transform: translateX(-100%);
+} */
