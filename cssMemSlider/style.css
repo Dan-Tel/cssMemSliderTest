@@ -11,6 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #333333;
+  overflow-y: hidden;
 }
 
 input[type="radio"] {
@@ -35,7 +36,10 @@ input[type="radio"] {
   display: flex;
   flex-flow: row nowrap;
   flex-direction: row;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.75vw 0 rgba(0, 0, 0, 0.25);
 }
 
 .slide {
@@ -58,20 +62,18 @@ input[type="radio"] {
   order: 3;
   display: flex;
   justify-content: space-between;
-  width: 25%;
 }
 
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4vw;
-  width: 4vw;
 }
 
 .nav__btn {
-  height: 2vw;
-  width: 2vw;
+  height: 1.75vw;
+  width: 1.75vw;
+  margin: 0.5vw;
   background-color: #ffffff;
   border-radius: 50%;
   box-shadow: -0.1vw 0.1vw 0 #ACACAC,
