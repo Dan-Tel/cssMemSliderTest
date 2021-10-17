@@ -163,12 +163,20 @@ input[type="radio"] {
 }
 
 @media screen and (min-width: 1440px) {
+  body {
+    margin: 0;
+  }
+
   .meme-container {
-    width: 60%;
+    width: 40%;
+  }
+  
+  .meme__text {
+    font-size: 1vw;
   }
 
   .slide {
-    height: 45vw;
+    height: 35vw;
   }
 }
 
